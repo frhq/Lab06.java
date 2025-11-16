@@ -1,0 +1,70 @@
+import java.util.Scanner;  
+
+public class Act4  {  
+   public static void main(String[] args) {  
+       Scanner input = new Scanner(System.in);  
+ 
+               int choice; 
+               int repeat = 1; 
+               while (repeat == 1){ 
+                   System.out.println(   "Select a pattern to print."); 
+                   System.out.println(   "1.rectangle!"); 
+                   System.out.println(   "2.right angled triangle left side!"); 
+                   System.out.println(   "3.inverted triangle!"); 
+                   System.out.println(   "4.pyramid!"); 
+                   System.out.println(   "5.Number pattern!"); 
+                   System.out.println(   "Enter the number you want to print: "); 
+                   choice = input.nextInt(); 
+ 
+              if(choice == 1){ 
+                  for(int i = 1; i <= 5 ; i++){ 
+                      for (int j = 1 ; j < 10; j++){ 
+                         System.out.print("*"); 
+                     }System.out.println(); 
+                   } 
+                 } 
+              else if (choice == 2) { 
+                  for (int i = 1; i <= 5; i++) { 
+                      for (int j = 1; j <= i; j++) 
+                        System.out.print("*"); 
+                      System.out.println(); 
+                   } 
+                 } 
+              else if (choice == 3) { 
+                   for (int r = 1; r <= 5; r++) { 
+                       for (int s = 1; s <= 5 - r; s++) 
+                            System.out.print(" "); 
+                   for (int c = 1; c <= r; c++) 
+                         System.out.print("*"); 
+                         System.out.println(); 
+                     } 
+                  } 
+               else if (choice == 4) { 
+                     for (int i = 1; i <= 5; i++) { 
+                        for (int s = 1; s <= 5 - i; s++) 
+                        System.out.print(" "); 
+                     for (int j = 1; j <= 2 * i - 1; j++) 
+                        System.out.print("*"); 
+                        System.out.println(); 
+                      } 
+                    } 
+                else if (choice == 5) { 
+                     for (int i = 1; i <= 5; i++) { 
+                        for (int s = 1; s <= 5 - i; s++) 
+                            System.out.print(" "); 
+                      for (int j = 1; j <= 2 * i - 1; j++) 
+                        System.out.print(i); 
+                       System.out.println(); 
+                     } 
+                  }  
+                 else{ 
+                      System.out.println("Invalid Choice!"); 
+                   } 
+   
+                        System.out.println("Do you want to print Another pattern??"); 
+                        System.out.println("Enter 1 for yes ans 0 for no"); 
+                        repeat = input.nextInt(); 
+                        System.out.print("Program Ended."); 
+                  }
+          }
+} 

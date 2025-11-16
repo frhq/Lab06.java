@@ -1,0 +1,73 @@
+import java.util.Scanner; 
+
+public class Act5 {
+  public static void main(String[] args) { 
+        Scanner input = new Scanner(System.in); 
+
+                 System.out.print("Enter year: "); 
+                 int year = input.nextInt(); 
+                 System.out.print("Enter first day of the year (0=Sun, 1=Mon, ..., 6=Sat): "); 
+                 int startDay = input.nextInt(); 
+
+                  int month = 1; 
+                       while (month <= 12) { 
+                              System.out.println(); 
+                  if (month == 1) 
+                          System.out.println("January " + year); 
+                  else if (month == 2) 
+                          System.out.println("February " + year); 
+                  else if (month == 3) 
+                          System.out.println("March " + year); 
+                  else if (month == 4) 
+                          System.out.println("April " + year); 
+                  else if (month == 5) 
+                          System.out.println("May " + year); 
+                  else if (month == 6) 
+                          System.out.println("June " + year); 
+                  else if (month == 7) 
+                          System.out.println("July " + year); 
+                  else if (month == 8) 
+                          System.out.println("August " + year); 
+                  else if (month == 9) 
+                          System.out.println("September " + year); 
+                  else if (month == 10) 
+                          System.out.println("October " + year); 
+                  else if (month == 11) 
+                          System.out.println("November " + year); 
+                  else if (month == 12) 
+                          System.out.println("December " + year); 
+ 
+                 System.out.println("Sun Mon Tue Wed Thu Fri Sat"); 
+                 int daysInMonth = 31; 
+ 
+                 if (month == 4 || month == 6 || month == 9 || month == 11) 
+                        daysInMonth = 30; 
+                 else if (month == 2) { 
+                  
+                 if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) 
+                    daysInMonth = 29; 
+                 else 
+                    daysInMonth = 28; 
+                    } 
+      
+                     int space = 0; 
+                        while (space < startDay) { 
+                         System.out.print("    "); 
+                         space++; 
+                          }            
+                      int day = 1; 
+                      while (day <= daysInMonth) { 
+                if (day < 10) 
+                     System.out.print("  " + day + " "); 
+                else 
+                     System.out.print(" " + day + " "); 
+                if ((day + startDay) % 7 == 0) 
+                     System.out.println(); 
+                     day++; 
+                     } 
+                  System.out.println("\n"); 
+                  startDay = (startDay + daysInMonth) % 7; 
+                  month++; 
+              } 
+      } 
+}

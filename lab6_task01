@@ -1,0 +1,25 @@
+import java.util.Scanner;  
+
+public class Act1 {  
+   public static void main(String[] args) {  
+       Scanner input = new Scanner(System.in);  
+ 
+         int num ; 
+         int max = 0 ; 
+         int maxIndex = 0; 
+         int index = 0; 
+            System.out.print("Enter the sequence of integers that end in 0: "); 
+   
+         while(true){ 
+            num = input.nextInt(); 
+         if (num == 0){ 
+              break; 
+              } index++; 
+         if (num > max){ 
+              max = num; 
+              maxIndex = index; 
+                } 
+          } 
+         System.out.print("The index of the highest number is: "  + maxIndex); 
+      } 
+} 

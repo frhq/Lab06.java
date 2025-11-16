@@ -1,0 +1,20 @@
+import java.util.Scanner;  
+
+public class Act2 {  
+     public static void main(String[] args) {  
+        Scanner input = new Scanner(System.in);  
+   
+          int num ; 
+          int evenCount = 0 ; 
+            System.out.print("Enter even numbers :"); 
+     
+           while(true) { 
+             num = input.nextInt(); 
+           if (num == 0){ 
+              break; 
+           }  if ( num % 2 ==0){ 
+           evenCount++;} 
+            } 
+          System.out.print("The number ending with 0 are : " + evenCount); 
+      } 
+} 
